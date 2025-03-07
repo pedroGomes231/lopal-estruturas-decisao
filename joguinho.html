@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joguinho</title>
+</head>
+<body>
+    <script>
+        let numeroAleatorio = Math.random()*19 + 1;
+        let numeroAleatorioInteiro = Math.round(numeroAleatorio)
+        document.write(numeroAleatorioInteiro);
+
+        let resposta = prompt("Estou pensando em um numero de 1 a 20")
+
+        if(resposta == numeroAleatorioInteiro){
+            document.write("Parabens você conseguiu acertar!")
+        }else{
+            document.write(" Você perdeu :(")
+        }
+    </script>
+</body>
+</html>
