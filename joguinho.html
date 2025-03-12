@@ -8,16 +8,24 @@
 <body>
     <script>
         let numeroAleatorio = Math.random()*19 + 1;
-        let numeroAleatorioInteiro = Math.round(numeroAleatorio)
-        document.write(numeroAleatorioInteiro);
+        let numeroAleatorioInteiro = Math.floor(numeroAleatorio)
+        
 
         let resposta = prompt("Estou pensando em um numero de 1 a 20")
 
-        if(resposta == numeroAleatorioInteiro){
-            document.write("Parabens você conseguiu acertar!")
-        }else{
-            document.write(" Você perdeu :(")
-        }
+        let resultado = (resposta >=1 && resposta <=20) ?
+                            (resposta == numeroAleatorioInteiro) ?
+                                " Parabens! Você adivinhou!":
+                                " Você errou! Eu pensei no numero " +
+                                    numeroAleatorioInteiro + "!":
+                            " Numero invalido."
+
+        document.write(resultado)
+        //if (resposta == numeroAleatorioInteiro){ 
+           // document.write(" Parabens você conseguiu acertar!")
+       // }else{
+        //    document.write(" Você perdeu :(")
+        //}
     </script>
 </body>
 </html>
